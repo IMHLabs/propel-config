@@ -1,5 +1,5 @@
 {
-    "name":         "propel/propel-config",
+    "name":         "IMHLabs/propel-config",
     "description":  "Propel Configuration Wrapper",
     "type":         "library",
     "keywords": [
