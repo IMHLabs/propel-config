@@ -1,0 +1,31 @@
+<?php
+/**
+ *
+ * Library to parsing of Propel configuration
+ *
+ * PHP Version: 5
+ *
+ * @category  InMotion
+ * @package   PropelConfig
+ * @author    IMH Development <development@inmotionhosting.com>
+ * @copyright 2018 Copyright (c) InMotion Hosting
+ * @license   https://inmotionhosting.com proprietary
+ * @link      https://inmotionhosting.com
+ */
+if (file_exists($file = __DIR__. '/vendor/autoload.php')) {
+    $loader = require $file;
+    $loader->add('PropelConfig\Tests', __DIR__ . '/tests');
+    $loader->register();
+} elseif (file_exists($file = __DIR__.'/../../../vendor/autoload.php')) {
+    $loader = require $file;
+    $loader->add('PropelConfig\Tests', __DIR__ . '/tests');
+    $loader->register();
+} elseif (file_exists($file = $propelDir . '/vendor/Symfony/Component/ClassLoader/UniversalClassLoader.php')) {
+    require_once $file;
+    $loader = new \Symfony\Component\ClassLoader\UniversalClassLoader();
+    $loader->registerNamespaces(array(
+        'PropelConfig\Tests' => __DIR__ . '/tests'
+    ));
+    $loader->register();
+}
+

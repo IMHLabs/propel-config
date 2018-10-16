@@ -1,0 +1,22 @@
+{
+    "name":         "propel/propel-config",
+    "description":  "Propel Configuration Wrapper",
+    "type":         "library",
+    "keywords": [
+        "Propel",
+        "ORM",
+        "Configuration"
+    ],
+    "require": {
+        "propel/propel": "2.0.0-alpha8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PropelConfig\\": "src/"
+        }
+    }
+}
+
